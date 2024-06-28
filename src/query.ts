@@ -2,7 +2,7 @@ import { resolveClient } from './client.js'
 import {ref, onBeforeUnmount, onBeforeMount, getCurrentInstance, onMounted, watch, toRaw, isReactive, isRef} from 'vue';
 import { noop } from './utils'
 import axios from 'axios';
-
+import { QueryOptions } from './types'
 
 
 
@@ -14,16 +14,7 @@ function unravel(obj) {
   return obj
 }
 
-interface QueryOptions {
-    query: string
-    fetchOnMount?: boolean
-    tags?: string[]
-    variables?: Record<string, any>
-    onData?: Function
-    onError?: Function
-    skip?: boolean
-    paused?: Function
-}
+
 
 export function useQuery(opts: QueryOptions) {
   const { url, registerTags, unregisterTags } = resolveClient()

@@ -1,24 +1,18 @@
 import uniqueId from 'lodash/uniqueId';
+import axios, {AxiosRequestConfig} from "axios";
+import { ClientOptions } from './types'
 
-let url = ''
-let headers = {}
-let axiosOpts = {}
+
+let url: string = ''
+let axiosConfig: AxiosRequestConfig = {}
 let activeQueryTags = []
 let activeClient = null
-
-
-interface ClientOptions {
-    url: string
-    headers?: Record<string, string>
-    axiosOpts?: Record<string, any>
-}
 
 
 export function createClient(opts: ClientOptions) {
   if (opts) {
     url = opts.url
-    headers = {...opts.headers}
-    axiosOpts = {...opts.axiosOpts}
+    axiosConfig = {...opts.axiosConfig}
   }
 
   const registerTags = (tags: string[], refetch: Function) => {
@@ -64,3 +58,7 @@ export function useClient(opts: ClientOptions) {
 
   return client
 }
+
+const client = useClient({
+  url: 'https://api.example.com',
+})

@@ -2,13 +2,7 @@ import { resolveClient } from './client.js'
 import {ref, onBeforeUnmount, onBeforeMount, getCurrentInstance, onMounted} from 'vue';
 import axios from 'axios';
 import { noop } from './utils'
-
-interface MutationOptions {
-    mutation: string
-    refetchTags?: string[]
-    onData?: Function
-    onError?: Function
-}
+import { MutationOptions } from './types'
 
 export function useMutation(mutation, opts: MutationOptions) {
   const { url, refetchTaggedQueries } = resolveClient()
