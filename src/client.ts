@@ -59,6 +59,4 @@ export function useClient(opts: ClientOptions) {
   return client
 }
 
-const client = useClient({
-  url: 'https://api.example.com',
-})
+export default useClient;
