@@ -1,9 +1,10 @@
 import { resolveClient } from './client.js'
 import {ref, onBeforeUnmount, onBeforeMount, getCurrentInstance, onMounted, watch, toRaw, isReactive, isRef} from 'vue';
+import { noop } from './utils'
 import axios from 'axios';
 
 
-const noop = () => {}
+
 
 function unravel(obj) {
   if (isRef(obj)) {
@@ -13,13 +14,22 @@ function unravel(obj) {
   return obj
 }
 
-export function useQuery(opts) {
+interface QueryOptions {
+    query: string
+    fetchOnMount?: boolean
+    tags?: string[]
+    variables?: Record<string, any>
+    onData?: Function
+    onError?: Function
+    skip?: boolean
+    paused?: Function
+}
+
+export function useQuery(opts: QueryOptions) {
   const { url, registerTags, unregisterTags } = resolveClient()
 
   let queryName = opts.query
-
   let abortController = null
-
   let currentFetchOnMount = opts.fetchOnMount ?? true
 
   let data = ref(null)
