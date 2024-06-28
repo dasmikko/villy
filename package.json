@@ -2,22 +2,26 @@
   "name": "villy",
   "version": "0.0.1",
   "description": "A Graphql client",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "/dist"
-  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "axios": "^1.7.2",
     "lodash": "^4.17.21",
     "vue": "^3.4.31"
   },
   "devDependencies": {
-    "@babel/types": "^7.24.7"
+    "@babel/types": "^7.24.7",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2"
   }
 }
