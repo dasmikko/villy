@@ -16,12 +16,12 @@
   ],
   "dependencies": {
     "axios": "^1.7.2",
-    "lodash": "^4.17.21",
-    "vue": "^3.4.31"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@babel/types": "^7.24.7",
     "tsup": "^8.1.0",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.2",
+    "vue": "^3.4.31"
   }
 }
