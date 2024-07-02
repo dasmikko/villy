@@ -4,10 +4,10 @@ import axios from 'axios';
 import { noop } from './utils'
 import { MutationOptions } from './types'
 
-export function useMutation(mutation, opts: MutationOptions) {
+export function useMutation(path, opts: MutationOptions) {
   const { url, refetchTaggedQueries } = resolveClient()
 
-  let mutationName = mutation
+  let mutationPath = path
   let tagsToRefetch = opts.refetchTags ?? []
 
   let data = ref(null)
@@ -17,8 +17,8 @@ export function useMutation(mutation, opts: MutationOptions) {
   let onError = opts.onError ?? noop
 
   onBeforeMount(() => {
-    if (!mutationName) {
-      throw new Error("No mutation provided")
+    if (!path) {
+      throw new Error("No path was provided")
     }
   })
 
@@ -39,7 +39,7 @@ export function useMutation(mutation, opts: MutationOptions) {
 
     try {
       const response = await axios({
-        url: mutationName,
+        url: mutationPath,
         baseURL: url,
         method: 'post',
         withCredentials: true,

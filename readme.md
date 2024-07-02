@@ -1,13 +1,12 @@
 # Villy
 
-A simple wrapper for Axios, that uses the same syntax as the vue [villus graphql](https://villus.dev/) library.
+A simple wrapper for Axios, that uses the same syntax as the vue [villus graphql](https://villus.dev/) library. Written in TypeScript
 
-It's still based on using Graphql and Postgraphile, but instead of the client having all the queries, it's the backend that has them.
+## Why?
 
-I'm not sure if this makes the whole thing more or less complicated, but I like the idea of having the backend handle the queries.
+I wanted to have a simple way to query and mutate data in my Vue applications, and I really liked the syntax of the [villus graphql](https://villus.dev/) library. So I decided to create a similar library for REST APIs.
 
-This might just be super stupid...
-
+## Future
 I'm planning to switch to fetch to make it more lightweight, but for now, it's just a wrapper for Axios.
 
 ## Installation
@@ -30,7 +29,7 @@ createClient({
 
 // Query
 const { data, error, isFetching, execute } = useQuery({
-  query: 'getCaseById',
+  path: 'getCaseById',
   tags: ['getCases'],
   variables: {},
 })

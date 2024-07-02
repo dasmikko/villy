@@ -7,7 +7,7 @@ export interface ClientOptions {
 
 
 export interface QueryOptions {
-    query: string
+    path: string
     fetchOnMount?: boolean
     tags?: string[]
     variables?: Record<string, any>
@@ -18,7 +18,7 @@ export interface QueryOptions {
 }
 
 export interface MutationOptions {
-    mutation: string
+    path: string
     refetchTags?: string[]
     onData?: Function
     onError?: Function

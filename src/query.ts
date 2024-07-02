@@ -19,7 +19,7 @@ function unravel(obj) {
 export function useQuery(opts: QueryOptions) {
   const { url, registerTags, unregisterTags } = resolveClient()
 
-  let queryName = opts.query
+  let path = opts.path
   let abortController = null
   let currentFetchOnMount = opts.fetchOnMount ?? true
 
@@ -83,7 +83,7 @@ export function useQuery(opts: QueryOptions) {
 
     try {
       const response = await axios({
-        url: queryName,
+        url: path,
         baseURL: url,
         method: 'post',
         signal: abortController.signal,
