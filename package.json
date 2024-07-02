@@ -19,7 +19,7 @@
     "lodash": "4.17.21"
   },
   "peerDependencies": {
-    "vue": "^3.4.31"
+    "vue": "^3.0.0 || ^2.7.0"
   },
   "devDependencies": {
     "@babel/types": "^7.24.7",
