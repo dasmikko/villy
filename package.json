@@ -1,7 +1,7 @@
 {
   "name": "villy",
   "version": "0.0.1",
-  "description": "A Graphql client",
+  "description": "A HTTP client",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
