@@ -46,7 +46,7 @@ const { data, error, isFetching, execute } = useMutation('createCase', {
 
 ## Todo
 * [ ] Remove lodash dependency
-* [ ] Add fetch support
+* [ ] Remove Axios dependency
 * [ ] Add add support for setting client per query/mutation
 * [ ] Add tests
 * [ ] Add more examples
