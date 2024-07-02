@@ -2,6 +2,14 @@
 
 A simple wrapper for Axios, that uses the same syntax as the vue [villus graphql](https://villus.dev/) library. Written in TypeScript
 
+## Features
+
+* Simple syntax
+* Reactive
+* Refetching on mutation
+* Composition API support
+* Written in TypeScript
+
 ## Why?
 
 I wanted to have a simple way to query and mutate data in my Vue applications, and I really liked the syntax of the [villus graphql](https://villus.dev/) library. So I decided to create a similar library for REST APIs.
