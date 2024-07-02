@@ -1,5 +1,5 @@
 import uniqueId from 'lodash/uniqueId';
-import axios, {AxiosRequestConfig} from "axios";
+import {AxiosRequestConfig} from "axios";
 import { ClientOptions } from './types'
 
 

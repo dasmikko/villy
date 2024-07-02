@@ -2,7 +2,7 @@
 A simple wrapper for Axios, that uses the same syntax as the vue [villus graphql](https://villus.dev/) library. Written in TypeScript
 
 ## Features
-* Simple syntax
+* Tiny 5kb bundle size
 * Reactive
 * Refetching on mutation
 * Composition API support
@@ -45,6 +45,7 @@ const { data, error, isFetching, execute } = useMutation('createCase', {
 ```
 
 ## Todo
+* [ ] Remove lodash dependency
 * [ ] Add fetch support
 * [ ] Add add support for setting client per query/mutation
 * [ ] Add tests

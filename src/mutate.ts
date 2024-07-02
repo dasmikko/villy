@@ -1,5 +1,5 @@
 import { resolveClient } from './client.js'
-import {ref, onBeforeUnmount, onBeforeMount, getCurrentInstance, onMounted} from 'vue';
+import {ref, onBeforeMount } from 'vue';
 import axios from 'axios';
 import { noop } from './utils'
 import { MutationOptions } from './types'
