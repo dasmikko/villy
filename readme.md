@@ -1,4 +1,8 @@
 # Villy
+[![npm](https://img.shields.io/npm/v/villy)](https://www.npmjs.com/package/villy)
+[![NPM](https://img.shields.io/npm/l/villy)](https://www.npmjs.com/package/villy)
+[![NPM](https://img.shields.io/npm/dw/villy)](https://www.npmjs.com/package/villy)
+
 A simple wrapper for Axios, that uses the same syntax as the vue [villus graphql](https://villus.dev/) library. Written in TypeScript, for the Vue.js Framework.
 
 ## Features
