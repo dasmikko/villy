@@ -1,7 +1,8 @@
 {
   "name": "villy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A small, fast and simple http client",
+  "repository": "https://github.com/dasmikko/villy",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
